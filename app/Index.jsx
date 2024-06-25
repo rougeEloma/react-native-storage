@@ -10,11 +10,11 @@ import { useGlobalContext } from "../context/GlobalProvider";
 const Welcome = () => {
   const { loading, isLogged } = useGlobalContext();
 
-  if (!loading && isLogged) return <Redirect href="/home" />;
+  // if (!loading && isLogged) return <Redirect href="/home" />;
 
   return (
     <SafeAreaView className="bg-primary h-full">
-      <Loader isLoading={loading} />
+      {/* <Loader isLoading={loading} /> */}
 
       <ScrollView
         contentContainerStyle={{
@@ -38,12 +38,12 @@ const Welcome = () => {
             <Text className="text-3xl text-white font-bold text-center">
               Discover Endless{"\n"}
               Possibilities with{" "}
-              <Text className="text-secondary-200">Aora</Text>
+              <Text className="text-secondary-200">ArtStorage</Text>
             </Text>
 
             <Image
               source={images.path}
-              className="w-[136px] h-[15px] absolute -bottom-2 -right-8"
+              className="w-[136px] h-[15px] absolute -bottom-2 -right-1"
               resizeMode="contain"
             />
           </View>
