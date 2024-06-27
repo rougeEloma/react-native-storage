@@ -18,7 +18,7 @@ const SignIn = () => {
 
   const submit = async () => {
     if (form.email === "" || form.password === "") {
-      Alert.alert("Error", "Please fill in all fields");
+      Alert.alert("Error", "Merci de remplir tous les champs");
     }
 
     setSubmitting(true);
@@ -29,7 +29,7 @@ const SignIn = () => {
       setUser(result);
       setIsLogged(true);
 
-      Alert.alert("Success", "User signed in successfully");
+      Alert.alert("Success", "L'utilisateur s'est connecté avec succès");
       router.replace("/home");
     } catch (error) {
       Alert.alert("Error", error.message);
@@ -54,7 +54,7 @@ const SignIn = () => {
           />
 
           <Text className="text-2xl font-semibold text-white mt-10 font-psemibold">
-            Log in to ArtStorage
+            Entrer dans ArtStorage
           </Text>
 
           <FormField
@@ -66,14 +66,14 @@ const SignIn = () => {
           />
 
           <FormField
-            title="Password"
+            title="Mot de passe"
             value={form.password}
             handleChangeText={(e) => setForm({ ...form, password: e })}
             otherStyles="mt-7"
           />
 
           <CustomButton
-            title="Sign In"
+            title="Se connecter"
             handlePress={submit}
             containerStyles="mt-7"
             isLoading={isSubmitting}
@@ -81,13 +81,13 @@ const SignIn = () => {
 
           <View className="flex justify-center pt-5 flex-row gap-2">
             <Text className="text-lg text-gray-100 font-pregular">
-              Don't have an account?
+            Vous n'avez pas de compte ?
             </Text>
             <Link
               href="/sign-up"
               className="text-lg font-psemibold text-secondary"
             >
-              Signup
+              S'inscrire
             </Link>
           </View>
         </View>
